@@ -38,11 +38,16 @@
 
   // A price written in a plain sentence ("... 3 550 دج") is reordered by the bidi
   // algorithm inside this RTL page, so it is wrapped in invisible LRI/PDI controls and
-  // keeps the same number-then-currency order as the price components.
+  // regrouped to the site's "3 550" format, keeping number-then-currency order.
   function isolatePrices(text) {
     if (typeof text !== "string" || text.indexOf("دج") === -1) return text;
     return text.replace(/(\d[\d\u00a0\u202f \u2009]*)\s*دج/g, function (match, amount) {
-      return "\u2066" + amount.trim() + " دج\u2069";
+      const digits = String(amount).replace(/[^\d]/g, "");
+      if (!digits) return match;
+      const grouped = window.DZStoreFormatAmount
+        ? window.DZStoreFormatAmount(Number(digits))
+        : digits;
+      return "\u2066" + (grouped || digits) + " دج\u2069";
     });
   }
 
