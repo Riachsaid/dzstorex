@@ -136,7 +136,7 @@
             "رقم الطلب: <strong>" + escapeHtml(result.orderRef) + "</strong><br>" +
             "المنتج: " + escapeHtml(result.productName) + "<br>" +
             "الكمية: " + escapeHtml(String(result.quantity)) + "<br>" +
-            "مجموع المنتجات: <strong>" + formatDa(result.totalDa) + "</strong> (دون مصاريف التوصيل)<br>" +
+            "مجموع المنتجات: " + priceHtml(result.totalDa, "price-inline") + " (دون مصاريف التوصيل)<br>" +
             escapeHtml(result.message);
           resultEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
         } else {
@@ -184,14 +184,43 @@
       .replace(/'/g, "&#39;");
   }
 
-  function formatDa(value) {
+  // French grouping gives narrow no-break spaces; normalise every space variant to a
+  // plain space so the amount is always "4 300" (and never "4300" or a weird gap).
+  function formatAmount(value) {
     const n = Number(value);
-    if (!Number.isFinite(n)) return "غير متوفر";
-    // French grouping gives narrow no-break spaces; normalise every space variant
-    // to a plain space so the price reads "4 300 دج" (and never "4300 دج").
-    return n.toLocaleString("fr-FR").replace(/[\u202f\u00a0\u2009]/g, " ") + " دج";
+    if (!Number.isFinite(n)) return "";
+    return n.toLocaleString("fr-FR").replace(/[\u202f\u00a0\u2009]/g, " ");
+  }
+
+  function formatDa(value) {
+    const amount = formatAmount(value);
+    return amount ? amount + " دج" : "غير متوفر";
+  }
+
+  // The page is RTL, so a bare "4 300 دج" string is laid out by the bidi algorithm with
+  // "دج" on the left and the amount on the right — the price looks reversed
+  // ("دج 300 4"). Every price is therefore an isolated LTR unit: the amount reads
+  // left-to-right and the currency stays on its right, e.g. "4 300 دج".
+  function priceInnerHtml(value) {
+    const amount = formatAmount(value);
+    if (!amount) return "غير متوفر";
+    return (
+      '<span class="price-amount">' + amount + "</span>" +
+      ' <span class="price-currency" dir="rtl">دج</span>'
+    );
+  }
+
+  function priceHtml(value, className) {
+    return (
+      '<span class="' + (className || "price-inline") + '" dir="ltr">' +
+        priceInnerHtml(value) +
+      "</span>"
+    );
   }
 
   window.DZStoreFormatDa = formatDa;
+  window.DZStoreFormatAmount = formatAmount;
+  window.DZStorePriceInnerHtml = priceInnerHtml;
+  window.DZStorePriceHtml = priceHtml;
   window.DZStoreEscapeHtml = escapeHtml;
 })();

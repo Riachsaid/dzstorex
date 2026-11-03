@@ -13,6 +13,12 @@
     return window.DZStoreFormatDa ? window.DZStoreFormatDa(value) : String(value) + " دج";
   }
 
+  // Isolated LTR price markup (see order-form.js): amount left, currency right.
+  function priceHtml(value, className) {
+    if (window.DZStorePriceHtml) return window.DZStorePriceHtml(value, className);
+    return '<span class="' + className + '" dir="ltr">' + formatDa(value) + "</span>";
+  }
+
   function escapeHtml(value) {
     return window.DZStoreEscapeHtml ? window.DZStoreEscapeHtml(value) : String(value);
   }
@@ -42,7 +48,7 @@
             '<div class="product-body">' +
               "<h3>" + escapeHtml(p.name) + "</h3>" +
               '<div class="product-meta">' +
-                '<div class="price-line"><span class="price">' + (p.priceDa === null ? "غير متوفر" : formatDa(p.priceDa)) + "</span></div>" +
+                '<div class="price-line">' + (p.priceDa === null ? '<span class="price">غير متوفر</span>' : priceHtml(p.priceDa, "price")) + "</div>" +
                 '<div class="status-line"><span class="badge ' + (p.orderable ? "badge-available" : "badge-unverified") + '">' + availabilityLabel(p) + "</span></div>" +
               "</div>" +
             "</div>" +
@@ -82,8 +88,8 @@
     const qty = Math.max(1, Math.min(10, Number(quantityEl && quantityEl.value) || 1));
     const total = Number(selected.priceDa) * qty;
     summaryEl.innerHTML =
-      '<span class="summary-line">سعر الوحدة: <span class="price-inline">' + formatDa(selected.priceDa) + "</span></span>" +
-      '<span class="summary-line">المجموع: <span class="price-inline">' + formatDa(total) + "</span> (دون التوصيل)</span>";
+      '<span class="summary-line"><span class="summary-label">سعر الوحدة:</span> ' + priceHtml(selected.priceDa, "price-inline") + "</span>" +
+      '<span class="summary-line"><span class="summary-label">المجموع:</span> ' + priceHtml(total, "price-inline") + ' <span class="summary-note">(دون التوصيل)</span></span>';
   }
 
   async function load() {

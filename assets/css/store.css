@@ -239,6 +239,29 @@ button:disabled { opacity: .5; cursor: not-allowed; }
   font-variant-numeric: tabular-nums;
 }
 
+/* RTL PAGE, LTR PRICES
+   A bare "4 300 دج" inside the RTL page is reordered by the bidi algorithm: the
+   currency is pushed to the left of the amount and the price looks reversed
+   ("دج 300 4"). Every price is therefore its own isolated LTR run, so the amount
+   always renders left-to-right and the currency sits to its right. */
+.price,
+.price-inline,
+.product-price,
+.summary-total {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+/* The isolated LTR run must keep the layout alignment it had before the fix:
+   it stays flush with the right edge of the RTL card / column. */
+.price { text-align: right; }
+.product-price { text-align: right; }
+.price-amount,
+.price-currency {
+  unicode-bidi: isolate;
+}
+.price-currency { direction: rtl; }
+.price-amount { direction: ltr; }
+
 .badge {
   display: inline-block;
   padding: 4px 8px;
@@ -360,6 +383,8 @@ button:disabled { opacity: .5; cursor: not-allowed; }
   gap: 6px;
   min-width: 0;
 }
+.summary-label { color: var(--muted); }
+.summary-note { color: var(--muted); font-size: 12px; }
 .order-summary strong {
   color: var(--green);
   font-size: 18px;
