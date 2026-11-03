@@ -87,8 +87,8 @@
     const qty = Math.max(1, Math.min(10, Number(quantityEl && quantityEl.value) || 1));
     const total = Number(currentProduct.priceDa) * qty;
     summaryEl.innerHTML =
-      "<span>سعر الوحدة: <strong>" + formatDa(currentProduct.priceDa) + "</strong></span>" +
-      "<span>المجموع: <strong>" + formatDa(total) + "</strong> (دون التوصيل)</span>";
+      '<span class="summary-line">سعر الوحدة: <span class="price-inline">' + formatDa(currentProduct.priceDa) + "</span></span>" +
+      '<span class="summary-line">المجموع: <span class="price-inline">' + formatDa(total) + "</span> (دون التوصيل)</span>";
   }
 
   function renderProduct(product) {
@@ -108,13 +108,15 @@
         const verified = formatDate(product.stockVerifiedAt);
         availabilityEl.className = "availability-note available";
         availabilityEl.innerHTML =
-          '<span class="badge badge-available">متوفر للطلب</span> ' +
-          (verified ? "تم التحقق من التوفر بتاريخ " + escapeHtml(verified) + "." : "التوفر مؤكد من المتجر.");
+          '<span class="badge badge-available">متوفر للطلب</span>' +
+          '<span class="availability-text">' +
+            (verified ? "تم التحقق من التوفر بتاريخ " + escapeHtml(verified) + "." : "التوفر مؤكد من المتجر.") +
+          "</span>";
       } else {
         availabilityEl.className = "availability-note unverified";
         availabilityEl.innerHTML =
-          '<span class="badge badge-unverified">التوفر غير مؤكد</span> ' +
-          "الطلب غير متاح حالياً لهذا المنتج. يمكنك سؤال المساعد أو التواصل مع الفريق.";
+          '<span class="badge badge-unverified">التوفر غير مؤكد</span>' +
+          '<span class="availability-text">الطلب غير متاح حالياً لهذا المنتج. يمكنك سؤال المساعد أو التواصل مع الفريق.</span>';
       }
     }
 

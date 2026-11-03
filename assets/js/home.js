@@ -42,8 +42,8 @@
             '<div class="product-body">' +
               "<h3>" + escapeHtml(p.name) + "</h3>" +
               '<div class="product-meta">' +
-                '<span class="price">' + (p.priceDa === null ? "غير متوفر" : formatDa(p.priceDa)) + "</span>" +
-                '<span class="badge ' + (p.orderable ? "badge-available" : "badge-unverified") + '">' + availabilityLabel(p) + "</span>" +
+                '<div class="price-line"><span class="price">' + (p.priceDa === null ? "غير متوفر" : formatDa(p.priceDa)) + "</span></div>" +
+                '<div class="status-line"><span class="badge ' + (p.orderable ? "badge-available" : "badge-unverified") + '">' + availabilityLabel(p) + "</span></div>" +
               "</div>" +
             "</div>" +
           "</a>"
@@ -81,10 +81,9 @@
     }
     const qty = Math.max(1, Math.min(10, Number(quantityEl && quantityEl.value) || 1));
     const total = Number(selected.priceDa) * qty;
-    summaryEl.textContent =
-      "سعر الوحدة: " + formatDa(selected.priceDa) +
-      " — المجموع: " + formatDa(total) +
-      " (دون التوصيل)";
+    summaryEl.innerHTML =
+      '<span class="summary-line">سعر الوحدة: <span class="price-inline">' + formatDa(selected.priceDa) + "</span></span>" +
+      '<span class="summary-line">المجموع: <span class="price-inline">' + formatDa(total) + "</span> (دون التوصيل)</span>";
   }
 
   async function load() {

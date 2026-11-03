@@ -187,7 +187,9 @@
   function formatDa(value) {
     const n = Number(value);
     if (!Number.isFinite(n)) return "غير متوفر";
-    return n.toLocaleString("fr-FR").replace(/\u202f/g, " ") + " دج";
+    // French grouping gives narrow no-break spaces; normalise every space variant
+    // to a plain space so the price reads "4 300 دج" (and never "4300 دج").
+    return n.toLocaleString("fr-FR").replace(/[\u202f\u00a0\u2009]/g, " ") + " دج";
   }
 
   window.DZStoreFormatDa = formatDa;

@@ -213,8 +213,31 @@ button:disabled { opacity: .5; cursor: not-allowed; }
   overflow: hidden;
   min-height: 42px;
 }
-.product-meta { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: auto; }
-.price { color: var(--green); font-weight: 900; font-size: 16px; white-space: nowrap; }
+.product-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  margin-top: auto;
+}
+.price-line { display: block; width: 100%; }
+.status-line { display: block; }
+/* The price is its own line, bold and never broken: "4 300 دج" must stay one unit. */
+.price {
+  display: block;
+  color: var(--green);
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.25;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.price-inline {
+  color: var(--green);
+  font-weight: 800;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
 
 .badge {
   display: inline-block;
@@ -275,9 +298,21 @@ button:disabled { opacity: .5; cursor: not-allowed; }
 
 .product-info { display: flex; flex-direction: column; gap: 14px; }
 .product-info h1 { font-size: 25px; margin: 0; }
-.product-price { font-size: 30px; color: var(--green); font-weight: 900; }
+.product-price {
+  display: block;
+  font-size: 30px;
+  line-height: 1.2;
+  color: var(--green);
+  font-weight: 900;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
 .product-sub { color: var(--muted); font-size: 12px; }
 .availability-note {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
   font-size: 13px;
   line-height: 1.8;
   padding: 11px 13px;
@@ -285,6 +320,7 @@ button:disabled { opacity: .5; cursor: not-allowed; }
   background: #0d1527;
   border: 1px solid var(--line);
 }
+.availability-text { display: block; }
 .availability-note.available { border-color: rgba(25, 201, 149, .45); }
 .availability-note.unverified { border-color: rgba(243, 179, 61, .45); }
 .product-description {
@@ -306,9 +342,10 @@ button:disabled { opacity: .5; cursor: not-allowed; }
 
 .order-summary {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: 10px 18px;
   background: #0d1527;
   border: 1px solid var(--line);
   border-radius: 12px;
@@ -316,7 +353,20 @@ button:disabled { opacity: .5; cursor: not-allowed; }
   margin-top: 14px;
   font-size: 14px;
 }
-.order-summary strong { color: var(--green); font-size: 18px; }
+.order-summary .summary-line {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+  min-width: 0;
+}
+.order-summary strong {
+  color: var(--green);
+  font-size: 18px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.order-summary .price-inline { font-size: 18px; }
 
 .chat-card { display: flex; flex-direction: column; min-height: 650px; }
 .chat-head {
