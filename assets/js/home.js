@@ -19,6 +19,10 @@
     return '<span class="' + className + '" dir="ltr">' + formatDa(value) + "</span>";
   }
 
+  function pricePlain(value) {
+    return window.DZStorePricePlain ? window.DZStorePricePlain(value) : formatDa(value);
+  }
+
   function escapeHtml(value) {
     return window.DZStoreEscapeHtml ? window.DZStoreEscapeHtml(value) : String(value);
   }
@@ -62,7 +66,7 @@
     if (!selectEl) return;
     const options = ['<option value="">اختر المنتج</option>'];
     products.forEach(function (p) {
-      const label = p.name + " — " + (p.priceDa === null ? "السعر غير متوفر" : formatDa(p.priceDa));
+      const label = p.name + " — " + (p.priceDa === null ? "السعر غير متوفر" : pricePlain(p.priceDa));
       options.push(
         '<option value="' + escapeHtml(p.id) + '"' + (p.orderable ? "" : " disabled") + ">" +
           escapeHtml(label) + (p.orderable ? "" : " (غير متاح للطلب)") +

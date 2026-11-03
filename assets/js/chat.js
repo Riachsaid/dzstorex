@@ -31,9 +31,19 @@
     if (!messagesEl) return;
     const div = document.createElement("div");
     div.className = "msg " + (type === "user" ? "user-msg" : "bot-msg");
-    div.textContent = text;
+    div.textContent = type === "user" ? text : isolatePrices(text);
     messagesEl.appendChild(div);
     messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  // A price written in a plain sentence ("... 3 550 دج") is reordered by the bidi
+  // algorithm inside this RTL page, so it is wrapped in invisible LRI/PDI controls and
+  // keeps the same number-then-currency order as the price components.
+  function isolatePrices(text) {
+    if (typeof text !== "string" || text.indexOf("دج") === -1) return text;
+    return text.replace(/(\d[\d\u00a0\u202f \u2009]*)\s*دج/g, function (match, amount) {
+      return "\u2066" + amount.trim() + " دج\u2069";
+    });
   }
 
   function setBusy(busy) {

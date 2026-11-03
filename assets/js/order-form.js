@@ -218,9 +218,18 @@
     );
   }
 
+  // Native <option> text cannot contain elements, so the same LTR isolation is applied
+  // with the bidi controls LRI (U+2066) / PDI (U+2069) around the amount + currency.
+  function pricePlain(value) {
+    const amount = formatAmount(value);
+    if (!amount) return "غير متوفر";
+    return "\u2066" + amount + " دج\u2069";
+  }
+
   window.DZStoreFormatDa = formatDa;
   window.DZStoreFormatAmount = formatAmount;
   window.DZStorePriceInnerHtml = priceInnerHtml;
   window.DZStorePriceHtml = priceHtml;
+  window.DZStorePricePlain = pricePlain;
   window.DZStoreEscapeHtml = escapeHtml;
 })();
