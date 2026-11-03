@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DZStoreX - تسوق منتجاتك بسهولة والدفع عند الاستلام في الجزائر">
+<title>DZStoreX | متجرك الإلكتروني</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f6f7f9;
+  color: #18212f;
+}
+
+header {
+  background: #101c32;
+  color: white;
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: 900;
+}
+
+.logo span {
+  color: #21c77a;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.hero {
+  background: linear-gradient(135deg,#101c32,#203c60);
+  color: white;
+  text-align: center;
+  padding: 75px 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  color: #d6dfeb;
+  font-size: 17px;
+  margin-bottom: 25px;
+}
+
+.hero button {
+  background: #21c77a;
+  color: #102033;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  background: white;
+  padding: 22px 10px;
+  text-align: center;
+}
+
+.features div {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 45px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 25px;
+}
+
+.product {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px #0000000b;
+  transition: .2s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background: #eee;
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: #687386;
+  line-height: 1.7;
+  min-height: 48px;
+}
+
+.price {
+  color: #15975c;
+  font-size: 23px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.order-btn {
+  width: 100%;
+  background: #15975c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 13px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.order-btn:hover {
+  background: #107a49;
+}
+
+.chat-section {
+  background: white;
+  margin: 10px auto 45px;
+  padding: 35px 20px;
+  text-align: center;
+  max-width: 850px;
+  border-radius: 15px;
+}
+
+.chat-section h2 {
+  margin-bottom: 12px;
+}
+
+.chat-section p {
+  color: #687386;
+  margin-bottom: 20px;
+}
+
+.chat-btn {
+  background: #101c32;
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+footer {
+  background: #101c32;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+  line-height: 2;
+}
+
+footer p {
+  color: #c4cedb;
+  font-size: 13px;
+}
+
+@media(max-width:600px) {
+  header {
+    padding: 17px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 27px;
+  }
+
+  .hero {
+    padding: 55px 15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">DZ<span>StoreX</span></div>
+  <nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#products">المنتجات</a>
+    <a href="#contact">اتصل بنا</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h1>مرحبا بيك في DZStoreX 🇩🇿</h1>
+  <p>اكتشف منتجات مميزة، تسوق بسهولة والدفع عند الاستلام.</p>
+  <button onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+    اكتشف المنتجات
+  </button>
+</section>
+
+<section class="features">
+  <div>🚚 توصيل للولايات</div>
+  <div>💵 الدفع عند الاستلام</div>
+  <div>🤝 خدمة الزبائن</div>
+</section>
+
+<main class="container" id="products">
+
+  <h2 class="section-title">منتجاتنا المميزة</h2>
+
+  <div class="products">
+
+    <article class="product">
+      <img src="https://placehold.co/600x500/e9eef5/18304c?text=Product+01"
+           alt="منتج تجريبي 1">
+
+      <div class="product-info">
+        <h3>منتج تجريبي رقم 1</h3>
+        <p class="description">
+          هذا وصف تجريبي للمنتج الأول. نبدلوه لاحقاً بمعلومات المنتج الحقيقية.
+        </p>
+        <div class="price">2,950 دج</div>
+        <button class="order-btn"
+          onclick="order('منتج تجريبي رقم 1')">
+          اطلب الآن
+        </button>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="https://placehold.co/600x500/e9eef5/18304c?text=Product+02"
+           alt="منتج تجريبي 2">
+
+      <div class="product-info">
+        <h3>منتج تجريبي رقم 2</h3>
+        <p class="description">
+          هذا وصف تجريبي للمنتج الثاني. نبدلوه لاحقاً بالمنتج الحقيقي.
+        </p>
+        <div class="price">3,500 دج</div>
+        <button class="order-btn"
+          onclick="order('منتج تجريبي رقم 2')">
+          اطلب الآن
+        </button>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<section class="chat-section" id="contact">
+  <h2>🤖 مساعد DZStoreX الذكي</h2>
+  <p>عندك سؤال على المنتجات؟ قريباً تقدر تهدر مباشرة مع مساعدنا الذكي.</p>
+  <button class="chat-btn" onclick="alert('المساعد الذكي سيتم ربطه مع n8n قريباً')">
+    تحدث مع المساعد
+  </button>
+</section>
+
+<footer>
+  <h2>DZStoreX</h2>
+  <p>متجرك الإلكتروني في الجزائر</p>
+  <p>الدفع عند الاستلام | © 2026 DZStoreX</p>
+</footer>
+
+<script>
+function order(product) {
+  alert(
+    "اخترت: " + product +
+    "\nنربطو زر الطلب مع n8n في المرحلة القادمة."
+  );
+}
+</script>
+
+</body>
+</html>
