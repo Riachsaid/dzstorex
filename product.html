@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تفاصيل المنتج | DZStoreX</title>
+<meta name="description" content="تفاصيل المنتج، الصور، السعر النهائي، التوفر، والطلب من DZStoreX.">
+<link rel="stylesheet" href="assets/css/store.css">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="index.html">DZ<span>StoreX</span></a>
+  <nav class="header-nav">
+    <a href="index.html#products">كل المنتجات</a>
+    <a href="index.html">الصفحة الرئيسية</a>
+    <div class="status">● المساعد الذكي متاح</div>
+  </nav>
+</header>
+
+<main>
+  <div class="breadcrumb">
+    <a href="index.html">الرئيسية</a> / <span>تفاصيل المنتج</span>
+  </div>
+
+  <div id="productLoading" class="products-loading">جاري تحميل المنتج...</div>
+  <div id="productError" class="hidden"></div>
+
+  <div id="productContent" class="hidden">
+    <section class="product-page">
+      <div class="product-gallery">
+        <div class="gallery-main" id="galleryMain"></div>
+        <div class="gallery-thumbs" id="galleryThumbs"></div>
+      </div>
+
+      <div class="product-info">
+        <h1 id="productTitle">تفاصيل المنتج</h1>
+        <div class="product-price" id="productPrice">—</div>
+        <div class="product-sub">السعر النهائي للزبون بالدينار الجزائري</div>
+        <div class="availability-note" id="productAvailability"></div>
+
+        <div class="cta-row">
+          <button class="primary" type="button" id="orderNowBtn">اطلب الآن</button>
+          <a class="secondary" href="#chatSection" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center;border-radius:11px;padding:14px 18px;font-weight:bold;font-size:14px;">اسأل المساعد</a>
+        </div>
+
+        <div class="product-description" id="productDescription"></div>
+      </div>
+    </section>
+
+    <section class="card product-order" id="orderSection">
+      <h2>📦 اطلب هذا المنتج</h2>
+
+      <form id="orderForm">
+        <input type="hidden" name="productId" id="orderProductId" value="">
+
+        <div class="section-title">معلومات الزبون</div>
+        <div class="grid">
+          <div class="field">
+            <label for="fullName">الاسم الكامل *</label>
+            <input id="fullName" name="fullName" required placeholder="الاسم واللقب" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="phone">رقم الهاتف *</label>
+            <input id="phone" name="phone" required type="tel" inputmode="tel"
+                   placeholder="05 / 06 / 07" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="wilayaCode">الولاية *</label>
+            <select name="wilayaCode" id="wilayaCode" required>
+              <option value="">اختر الولاية</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="commune">البلدية *</label>
+            <input id="commune" name="commune" required placeholder="اسم البلدية" autocomplete="address-level2">
+          </div>
+          <div class="field full">
+            <label for="address">العنوان بالتفصيل *</label>
+            <textarea id="address" name="address" required
+              placeholder="الحي، الشارع، رقم المنزل..." autocomplete="street-address"></textarea>
+          </div>
+        </div>
+
+        <div class="section-title">تفاصيل الطلب</div>
+        <div class="grid">
+          <div class="field">
+            <label for="productQuantity">الكمية *</label>
+            <input id="productQuantity" name="quantity" type="number" min="1" max="10" value="1" required>
+          </div>
+          <div class="field">
+            <label>شركة التوصيل *</label>
+            <div class="delivery" style="margin-top:0">
+              <label>
+                <input type="radio" name="deliveryCompany" value="Yalidine" required>
+                Yalidine
+              </label>
+              <label>
+                <input type="radio" name="deliveryCompany" value="ZR Express">
+                ZR Express
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="field" style="margin-top:15px">
+          <label for="notes">ملاحظات إضافية</label>
+          <textarea id="notes" name="notes" maxlength="300"
+            placeholder="أي معلومات إضافية..."></textarea>
+        </div>
+
+        <div class="order-summary" id="productOrderSummary"></div>
+
+        <button class="primary" type="submit" id="submitOrderBtn">إرسال الطلب</button>
+
+        <div class="form-message" id="formMessage" role="status" aria-live="polite"></div>
+        <div class="form-message" id="orderResult" role="status" aria-live="polite"></div>
+
+        <p class="note">
+          الطلب يُستلم أولاً ثم يتم تأكيده هاتفياً من الفريق.
+          المجموع المعروض هو مجموع المنتجات فقط دون مصاريف التوصيل؛
+          لا نعرض أي مصاريف توصيل غير مؤكدة.
+        </p>
+      </form>
+    </section>
+  </div>
+
+  <!-- AI CHAT (always visible on product pages) -->
+  <section class="card chat-card" id="chatSection" style="margin-top:22px">
+    <div class="chat-head">
+      <div>
+        <h2 style="margin-bottom:5px">🤖 مساعد DZStoreX</h2>
+        <div class="bot">Qwen AI · يسألك على هذا المنتج</div>
+      </div>
+      <span>●</span>
+    </div>
+
+    <div class="messages" id="messages">
+      <div class="msg bot-msg">
+        مرحبا بيك 👋
+        أنا مساعد DZStoreX. إذا عندك سؤال على هذا المنتج،
+        السعر، التوفر أو الطلب، اسألني هنا.
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <input id="chatInput" placeholder="اكتب سؤالك هنا..."
+             autocomplete="off" aria-label="رسالة للمساعد">
+      <button id="sendBtn" type="button">إرسال</button>
+    </div>
+
+    <p class="note">
+      المساعد ما يقدرش يأكد المخزون أو السعر أو التوصيل
+      بلا معلومات موثوقة من المتجر.
+    </p>
+  </section>
+</main>
+
+<footer>
+  DZStoreX © جميع الحقوق محفوظة<br>
+  الأسعار المعروضة نهائية للزبون بالدينار الجزائري. تأكيد الطلب يتم هاتفياً.
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/wilayas.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/chat.js"></script>
+<script src="assets/js/order-form.js"></script>
+<script src="assets/js/product.js"></script>
+
+</body>
+</html>

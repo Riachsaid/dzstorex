@@ -1,123 +1,45 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DZStoreX | الطلب والمساعد الذكي</title>
-<style>
-:root {
-  --bg:#0b1020; --card:#141c30; --line:#293650;
-  --text:#f4f7ff; --muted:#9ba9c2;
-  --blue:#477cff; --green:#19c995;
-}
-* {box-sizing:border-box}
-body {
-  margin:0; font-family:Tahoma,Arial,sans-serif;
-  background:radial-gradient(circle at top,#19294a,#0b1020 55%);
-  color:var(--text); min-height:100vh;
-}
-header {
-  padding:24px 6%; display:flex; justify-content:space-between;
-  align-items:center; border-bottom:1px solid var(--line);
-}
-.logo {font-size:25px;font-weight:900}
-.logo span {color:var(--green)}
-.status {color:var(--green);font-size:13px}
-main {max-width:1150px;margin:35px auto;padding:0 18px}
-.intro {text-align:center;margin-bottom:30px}
-.intro h1 {font-size:32px;margin-bottom:10px}
-.intro p {color:var(--muted);line-height:1.8}
-.layout {
-  display:grid;grid-template-columns:1.1fr .9fr;gap:20px;
-}
-.card {
-  background:rgba(20,28,48,.96);border:1px solid var(--line);
-  border-radius:20px;padding:24px;
-}
-h2 {font-size:21px;margin:0 0 20px}
-.section-title {
-  color:var(--green);font-size:14px;margin:22px 0 12px;
-  font-weight:bold;
-}
-.grid {display:grid;grid-template-columns:1fr 1fr;gap:13px}
-.field {display:flex;flex-direction:column;gap:7px}
-.field.full {grid-column:1/-1}
-label {font-size:13px;color:#cbd5e8}
-input,select,textarea {
-  width:100%;padding:13px;border-radius:10px;
-  background:#0d1527;color:white;border:1px solid var(--line);
-  outline:none;font-size:14px;
-}
-input:focus,select:focus,textarea:focus {
-  border-color:var(--blue);
-}
-textarea {resize:vertical;min-height:75px}
-.delivery {
-  display:flex;gap:12px;flex-wrap:wrap;
-}
-.delivery label {
-  flex:1;background:#0d1527;padding:13px;border-radius:10px;
-  border:1px solid var(--line);cursor:pointer;
-}
-.delivery input {width:auto}
-button {
-  border:0;border-radius:11px;padding:14px 18px;
-  cursor:pointer;font-weight:bold;font-size:14px;
-}
-.primary {background:var(--blue);color:white;width:100%;margin-top:20px}
-.secondary {background:#263653;color:white}
-button:disabled {opacity:.5;cursor:wait}
-.note {font-size:12px;color:var(--muted);line-height:1.7}
-.chat-card {display:flex;flex-direction:column;min-height:650px}
-.chat-head {
-  display:flex;justify-content:space-between;align-items:center;
-  border-bottom:1px solid var(--line);padding-bottom:15px;
-}
-.bot {color:var(--green);font-size:13px}
-.messages {
-  flex:1;overflow-y:auto;min-height:390px;max-height:520px;
-  padding:15px 2px;display:flex;flex-direction:column;gap:12px;
-}
-.msg {
-  padding:12px 14px;border-radius:13px;max-width:90%;
-  line-height:1.8;font-size:14px;white-space:pre-wrap;
-}
-.bot-msg {background:#202d47;align-self:flex-start}
-.user-msg {background:#244caa;align-self:flex-end}
-.chat-input {display:flex;gap:8px}
-.chat-input input {flex:1;min-width:0}
-.chat-input button {background:var(--green);color:#06251c}
-footer {text-align:center;padding:30px;color:var(--muted);font-size:12px}
-@media(max-width:800px) {
-  .layout {grid-template-columns:1fr}
-  .intro h1 {font-size:25px}
-  .chat-card {min-height:550px}
-}
-@media(max-width:450px) {
-  .grid {grid-template-columns:1fr}
-  .field.full {grid-column:auto}
-  .card {padding:17px}
-}
-</style>
+<title>DZStoreX | المنتجات والطلب والمساعد الذكي</title>
+<meta name="description" content="تسوق منتجات DZStoreX، شاهد السعر النهائي والتوفر، وأرسل طلبك مع مساعد ذكي للأسئلة.">
+<link rel="stylesheet" href="assets/css/store.css">
 </head>
 <body>
 
 <header>
-  <div class="logo">DZ<span>StoreX</span></div>
-  <div class="status">● المساعد الذكي متاح</div>
+  <a class="logo" href="index.html">DZ<span>StoreX</span></a>
+  <nav class="header-nav">
+    <a href="#products">المنتجات</a>
+    <a href="#orderForm">اطلب الآن</a>
+    <div class="status">● المساعد الذكي متاح</div>
+  </nav>
 </header>
 
 <main>
   <div class="intro">
     <h1>اطلب بسهولة، والمساعد معاك</h1>
-    <p>عمّر معلومات الطلب، وإذا عندك أي سؤال اسأل مساعد DZStoreX مباشرة.</p>
+    <p>اختر منتجك، شوف السعر النهائي والتوفر، وعمّر معلومات الطلب. وإذا عندك أي سؤال اسأل مساعد DZStoreX مباشرة.</p>
   </div>
+
+  <section class="products-section" id="products">
+    <div class="section-head">
+      <div>
+        <h2>منتجاتنا</h2>
+        <p>كل منتج عندو صفحة خاصة فيه بالتفاصيل والصور والسعر النهائي.</p>
+      </div>
+    </div>
+    <div id="productsLoading" class="products-loading">جاري تحميل المنتجات...</div>
+    <div id="productsError" class="products-error hidden"></div>
+    <div class="product-grid" id="productGrid"></div>
+  </section>
 
   <div class="layout">
 
     <!-- ORDER FORM -->
-    <section class="card">
+    <section class="card" id="orderSection">
       <h2>📦 معلومات الطلب</h2>
 
       <form id="orderForm">
@@ -125,40 +47,42 @@ footer {text-align:center;padding:30px;color:var(--muted);font-size:12px}
         <div class="section-title">معلومات الزبون</div>
         <div class="grid">
           <div class="field">
-            <label>الاسم الكامل *</label>
-            <input name="name" required placeholder="الاسم واللقب">
+            <label for="fullName">الاسم الكامل *</label>
+            <input id="fullName" name="fullName" required placeholder="الاسم واللقب" autocomplete="name">
           </div>
           <div class="field">
-            <label>رقم الهاتف *</label>
-            <input name="phone" required type="tel"
-                   placeholder="05 / 06 / 07">
+            <label for="phone">رقم الهاتف *</label>
+            <input id="phone" name="phone" required type="tel" inputmode="tel"
+                   placeholder="05 / 06 / 07" autocomplete="tel">
           </div>
           <div class="field">
-            <label>الولاية *</label>
-            <select name="wilaya" id="wilaya" required>
+            <label for="wilayaCode">الولاية *</label>
+            <select name="wilayaCode" id="wilayaCode" required>
               <option value="">اختر الولاية</option>
             </select>
           </div>
           <div class="field">
-            <label>البلدية *</label>
-            <input name="commune" required placeholder="اسم البلدية">
+            <label for="commune">البلدية *</label>
+            <input id="commune" name="commune" required placeholder="اسم البلدية" autocomplete="address-level2">
           </div>
           <div class="field full">
-            <label>العنوان بالتفصيل *</label>
-            <textarea name="address" required
-              placeholder="الحي، الشارع، رقم المنزل..."></textarea>
+            <label for="address">العنوان بالتفصيل *</label>
+            <textarea id="address" name="address" required
+              placeholder="الحي، الشارع، رقم المنزل..." autocomplete="street-address"></textarea>
           </div>
         </div>
 
         <div class="section-title">معلومات المنتج</div>
         <div class="grid">
           <div class="field">
-            <label>اسم المنتج *</label>
-            <input name="product" required placeholder="اسم المنتج">
+            <label for="productSelect">المنتج *</label>
+            <select name="productId" id="productSelect" required>
+              <option value="">اختر المنتج</option>
+            </select>
           </div>
           <div class="field">
-            <label>الكمية *</label>
-            <input name="quantity" type="number" min="1"
+            <label for="quantity">الكمية *</label>
+            <input id="quantity" name="quantity" type="number" min="1" max="10"
                    value="1" required>
           </div>
         </div>
@@ -166,29 +90,36 @@ footer {text-align:center;padding:30px;color:var(--muted);font-size:12px}
         <div class="section-title">شركة التوصيل</div>
         <div class="delivery">
           <label>
-            <input type="radio" name="delivery" value="Yalidine" required>
+            <input type="radio" name="deliveryCompany" value="Yalidine" required>
             Yalidine
           </label>
           <label>
-            <input type="radio" name="delivery" value="ZR Express">
+            <input type="radio" name="deliveryCompany" value="ZR Express">
             ZR Express
           </label>
         </div>
 
         <div class="field" style="margin-top:15px">
-          <label>ملاحظات إضافية</label>
-          <textarea name="notes"
+          <label for="notes">ملاحظات إضافية</label>
+          <textarea id="notes" name="notes" maxlength="300"
             placeholder="أي معلومات إضافية..."></textarea>
         </div>
 
-        <button class="primary" type="submit" id="reviewBtn">
-          راجع معلومات طلبي مع المساعد الذكي
+        <div class="order-summary" id="homeOrderSummary">
+          اختر منتجاً لعرض السعر النهائي.
+        </div>
+
+        <button class="primary" type="submit" id="submitOrderBtn">
+          إرسال الطلب
         </button>
 
+        <div class="form-message" id="formMessage" role="status" aria-live="polite"></div>
+        <div class="form-message" id="orderResult" role="status" aria-live="polite"></div>
+
         <p class="note">
-          هذا الزر يرسل المعلومات للمساعد لمراجعتها فقط.
-          لا يتم تسجيل أو تأكيد الطلب تلقائياً.
-          معلوماتك تُرسل إلى خادم DZStoreX لمعالجة طلبك.
+          الطلب يُستلم أولاً ثم يتم تأكيده هاتفياً من الفريق.
+          المجموع المعروض هو مجموع المنتجات فقط دون مصاريف التوصيل؛
+          لا نعرض أي مصاريف توصيل غير مؤكدة.
         </p>
       </form>
     </section>
@@ -215,8 +146,8 @@ footer {text-align:center;padding:30px;color:var(--muted);font-size:12px}
 
       <div class="chat-input">
         <input id="chatInput" placeholder="اكتب سؤالك هنا..."
-               autocomplete="off">
-        <button id="sendBtn">إرسال</button>
+               autocomplete="off" aria-label="رسالة للمساعد">
+        <button id="sendBtn" type="button">إرسال</button>
       </div>
 
       <p class="note">
@@ -228,148 +159,17 @@ footer {text-align:center;padding:30px;color:var(--muted);font-size:12px}
   </div>
 </main>
 
-<footer>DZStoreX © جميع الحقوق محفوظة</footer>
+<footer>
+  DZStoreX © جميع الحقوق محفوظة<br>
+  الأسعار المعروضة نهائية للزبون بالدينار الجزائري. تأكيد الطلب يتم هاتفياً.
+</footer>
 
-<script>
-const WEBHOOK_URL =
-  "https://uncorrectable-jeane-ungrudged.ngrok-free.dev/webhook/dzstorex/chat";
-
-const SESSION_ID = "dzstorex-" +
-  (crypto.randomUUID ? crypto.randomUUID() : Date.now());
-
-const wilayas = [
-"01 - أدرار","02 - الشلف","03 - الأغواط","04 - أم البواقي",
-"05 - باتنة","06 - بجاية","07 - بسكرة","08 - بشار",
-"09 - البليدة","10 - البويرة","11 - تمنراست","12 - تبسة",
-"13 - تلمسان","14 - تيارت","15 - تيزي وزو","16 - الجزائر",
-"17 - الجلفة","18 - جيجل","19 - سطيف","20 - سعيدة",
-"21 - سكيكدة","22 - سيدي بلعباس","23 - عنابة","24 - قالمة",
-"25 - قسنطينة","26 - المدية","27 - مستغانم","28 - المسيلة",
-"29 - معسكر","30 - ورقلة","31 - وهران","32 - البيض",
-"33 - إليزي","34 - برج بوعريريج","35 - بومرداس","36 - الطارف",
-"37 - تندوف","38 - تيسمسيلت","39 - الوادي","40 - خنشلة",
-"41 - سوق أهراس","42 - تيبازة","43 - ميلة","44 - عين الدفلى",
-"45 - النعامة","46 - عين تموشنت","47 - غرداية","48 - غليزان",
-"49 - تيميمون","50 - برج باجي مختار","51 - أولاد جلال",
-"52 - بني عباس","53 - عين صالح","54 - عين قزام",
-"55 - تقرت","56 - جانت","57 - المغير","58 - المنيعة"
-];
-
-const wilayaSelect = document.getElementById("wilaya");
-wilayas.forEach(w => {
-  const option = document.createElement("option");
-  option.value = w;
-  option.textContent = w;
-  wilayaSelect.appendChild(option);
-});
-
-const messages = document.getElementById("messages");
-const chatInput = document.getElementById("chatInput");
-const sendBtn = document.getElementById("sendBtn");
-
-function getOrderData() {
-  const form = document.getElementById("orderForm");
-  const data = Object.fromEntries(new FormData(form).entries());
-  return data;
-}
-
-function addMessage(text, type) {
-  const div = document.createElement("div");
-  div.className = "msg " + (type === "user" ? "user-msg" : "bot-msg");
-  div.textContent = text;
-  messages.appendChild(div);
-  messages.scrollTop = messages.scrollHeight;
-}
-
-async function askAI(message) {
-  const order = getOrderData();
-
-  const fullMessage = `
-أنت مساعد DZStoreX لخدمة الزبائن ومعلومات الطلبات.
-جاوب بلغة المستخدم وباختصار.
-لا تخترع الأسعار أو المخزون أو مصاريف التوصيل أو مواعيد التسليم.
-لا تؤكد تسجيل الطلب أو توفر المنتج.
-إذا كانت المعلومات ناقصة، اسأل الزبون عنها.
-
-معلومات الطلب الحالية:
-${JSON.stringify(order, null, 2)}
-
-رسالة الزبون:
-${message}
-`;
-
-  sendBtn.disabled = true;
-
-  try {
-    const response = await fetch(WEBHOOK_URL, {
-      method: "POST",
-      headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({
-        sessionId: SESSION_ID,
-        message: fullMessage,
-        language: "darija"
-      })
-    });
-
-    if (!response.ok) {
-      throw new Error("HTTP " + response.status);
-    }
-
-    const data = await response.json();
-
-    if (!data.success || !data.reply) {
-      throw new Error("Réponse AI invalide");
-    }
-
-    addMessage(data.reply, "bot");
-  } catch (error) {
-    console.error(error);
-    addMessage(
-      "سمحلي، المساعد ما قدرش يتصل بالخادم حالياً. حاول بعد قليل.",
-      "bot"
-    );
-  } finally {
-    sendBtn.disabled = false;
-  }
-}
-
-function sendChat() {
-  const message = chatInput.value.trim();
-  if (!message) return;
-
-  addMessage(message, "user");
-  chatInput.value = "";
-  askAI(message);
-}
-
-sendBtn.addEventListener("click", sendChat);
-
-chatInput.addEventListener("keydown", e => {
-  if (e.key === "Enter") sendChat();
-});
-
-document.getElementById("orderForm").addEventListener("submit", e => {
-  e.preventDefault();
-
-  if (!e.target.reportValidity()) return;
-
-  const order = getOrderData();
-
-  const phone = order.phone.replace(/[\s-]/g, "");
-  if (!/^(\+213|0)(5|6|7)[0-9]{8}$/.test(phone)) {
-    alert("تحقق من رقم الهاتف الجزائري.");
-    return;
-  }
-
-  addMessage("راجعلي معلومات الطلب هذي وقولي إذا كاين معلومات ناقصة.", "user");
-
-  askAI(
-    "راجع معلومات الطلب الحالية. وضحلي واش ناقص أو غير واضح، " +
-    "وما تأكدش الطلب. معلومات الطلب: " +
-    JSON.stringify(order)
-  );
-});
-</script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/wilayas.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/chat.js"></script>
+<script src="assets/js/order-form.js"></script>
+<script src="assets/js/home.js"></script>
 
 </body>
 </html>
