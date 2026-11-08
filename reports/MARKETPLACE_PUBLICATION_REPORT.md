@@ -14,7 +14,7 @@
 | منتجات جديدة مختارة | 5 |
 | إعلانات Marketplace منشورة | 5 |
 | إعلانات مؤكّدة «En ligne» في لوحة البائع | 5 |
-| إعلانات قيد المراجعة الآلية من فيسبوك (تبقى ظاهرة) | 2 |
+| إعلانات قيد المراجعة الآلية وقت إعداد التقرير | 0 (انتهت المراجعة) |
 | صفحات منتجات مضافة للموقع | 5 |
 | عمليات محجوبة / فاشلة | 0 |
 
@@ -56,18 +56,19 @@
 
 ## 4. الإعلانات على Marketplace
 
-| product_id | عنوان الإعلان | القسم | الحالة | حالة المراجعة | صورة الإثبات |
-|---|---|---|---|---|---|
-| 6526 | Support téléphone voiture 2 en 1 ventouse + numéro de stationnement | Électronique et ordinateurs | En ligne | — | `facebook/evidence/20261108-170250-published-sawa9ly-6526.png` |
-| 6538 | Brosse à dents électrique enfants U-shape USB IPX7 (2-7 ans) | Puériculture et enfants | En ligne | En cours d'examen | `facebook/evidence/20261108-170724-published-sawa9ly-6538.png` |
-| 6535 | Chauffage voiture 12V 150W 2 vitesses – anti-buée et dégivrage | Électronique et ordinateurs | En ligne | — | `facebook/evidence/20261108-170546-published-sawa9ly-6535.png` |
-| 6527 | Traceur intelligent InCard Smart Tag Apple Find My et Android IP67 | Électronique et ordinateurs | En ligne | — | `facebook/evidence/20261108-170422-published-sawa9ly-6527.png` |
-| 6541 | Horloge islamique numérique Azan Al-Haramee HA-4010 | Pour la maison | En ligne | En cours d'examen | `facebook/evidence/20261108-170855-published-sawa9ly-6541.png` |
+| product_id | عنوان الإعلان | القسم | الحالة | صورة الإثبات |
+|---|---|---|---|---|
+| 6526 | Support téléphone voiture 2 en 1 ventouse + numéro de stationnement | Électronique et ordinateurs | En ligne | `facebook/evidence/20261108-170250-published-sawa9ly-6526.png` |
+| 6538 | Brosse à dents électrique enfants U-shape USB IPX7 (2-7 ans) | Puériculture et enfants | En ligne | `facebook/evidence/20261108-170724-published-sawa9ly-6538.png` |
+| 6535 | Chauffage voiture 12V 150W 2 vitesses – anti-buée et dégivrage | Électronique et ordinateurs | En ligne | `facebook/evidence/20261108-170546-published-sawa9ly-6535.png` |
+| 6527 | Traceur intelligent InCard Smart Tag Apple Find My et Android IP67 | Électronique et ordinateurs | En ligne | `facebook/evidence/20261108-170422-published-sawa9ly-6527.png` |
+| 6541 | Horloge islamique numérique Azan Al-Haramee HA-4010 | Pour la maison | En ligne | `facebook/evidence/20261108-170855-published-sawa9ly-6541.png` |
 
 حالة كل إعلان قُرئت من لوحة البائع `https://www.facebook.com/marketplace/you/selling/` بعد النشر،
-بمطابقة معرّف الإعلان (listing id) وليس بالعنوان وحده.
+بمطابقة معرّف الإعلان (listing id) وليس بالعنوان وحده. آخر تحقّق: **08/11/2026 – 16:15 UTC**،
+والخمسة كلها ظهرت `En ligne` بدون أي لافتة مراجعة.
 
-- الحالة `En cours d'examen` هي مراجعة آلية عادية لإعلانات جديدة؛ الإعلان يبقى **En ligne** ويظهر للعموم.
+- المراجعة الآلية لإعلانَي 6538 و6541 انتهت أثناء التشغيل، وأصبح الاثنان `En ligne` عادياً.
 - الشرط `Neuf` مستعمل في الخمسة، والموقع `Aïn Témouchent, Algérie`.
 
 ### محتوى كل إعلان
@@ -133,7 +134,7 @@
    لذلك يفتح الناشر `/marketplace/create/item` مباشرة ويعيد المحاولة عليه فقط.
 3. التحقّق المجهول (بدون تسجيل دخول) لروابط الإعلانات يُعاد توجيهه لتسجيل الدخول بعد أول طلب،
    لذا اعتُمد على العرض الموثّق + لوحة البائع + عنوان/سعر الإعلان كدليل.
-4. إعلانان (6538، 6541) ما زالا في «En cours d'examen» الآلي وقت إعداد التقرير، وهما `En ligne` في اللوحة.
+4. إعلانا 6538 و6541 مرّا بالمراجعة الآلية أثناء التشغيل؛ آخر تحقّق (16:15 UTC) أظهر الخمسة `En ligne` بدون لافتة مراجعة.
 
 ---
 

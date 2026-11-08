@@ -39,10 +39,10 @@
 | المعرّف | عنوان الإعلان | السعر | حالة الإعلان | رابط Marketplace |
 |---|---|---|---|---|
 | 6526 | Support téléphone voiture 2 en 1 ventouse + numéro de stationnement | 1 800 دج | En ligne | <https://www.facebook.com/marketplace/item/29924210780514432> |
-| 6538 | Brosse à dents électrique enfants U-shape USB IPX7 (2-7 ans) | 2 100 دج | En ligne (قيد المراجعة الآلية) | <https://www.facebook.com/marketplace/item/39996588673319447> |
+| 6538 | Brosse à dents électrique enfants U-shape USB IPX7 (2-7 ans) | 2 100 دج | En ligne | <https://www.facebook.com/marketplace/item/39996588673319447> |
 | 6535 | Chauffage voiture 12V 150W 2 vitesses – anti-buée et dégivrage | 3 050 دج | En ligne | <https://www.facebook.com/marketplace/item/29139931515637927> |
 | 6527 | Traceur intelligent InCard Smart Tag Apple Find My et Android IP67 | 4 350 دج | En ligne | <https://www.facebook.com/marketplace/item/29496595640031208> |
-| 6541 | Horloge islamique numérique Azan Al-Haramee HA-4010 | 5 100 دج | En ligne (قيد المراجعة الآلية) | <https://www.facebook.com/marketplace/item/29011125538555337> |
+| 6541 | Horloge islamique numérique Azan Al-Haramee HA-4010 | 5 100 دج | En ligne | <https://www.facebook.com/marketplace/item/29011125538555337> |
 
 > رابط Marketplace يأتي من حقل `marketplace_url` في جدول `dzstorex_products`، ويعرضه
 > زر «شاهد الإعلان على Marketplace» في صفحة المنتج تلقائياً.

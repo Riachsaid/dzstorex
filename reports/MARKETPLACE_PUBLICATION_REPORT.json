@@ -16,11 +16,12 @@
       "selected": 5,
       "published": 5,
       "confirmed_online": 5,
-      "under_automated_review": 2,
+      "under_automated_review": 0,
       "blocked": 0,
       "failed": 0,
       "duplicates": 0,
-      "security_challenges": 0
+      "security_challenges": 0,
+      "final_status_checked_at": "2026-11-08T16:15:09Z"
     }
   },
   "products": [
@@ -75,8 +76,8 @@
       "marketplace_url": "https://www.facebook.com/marketplace/item/39996588673319447",
       "marketplace_listing_id": "39996588673319447",
       "marketplace_status": "En ligne",
-      "under_review": true,
-      "review_note": "Cette annonce est en cours d'examen — the listing remains online and public.",
+      "under_review": false,
+      "review_note": "Automated review completed; listing confirmed 'En ligne' with no review banner.",
       "published_at": "2026-11-08T16:07:41+00:00",
       "status": "PUBLISHED",
       "evidence_screenshot": "facebook/evidence/20261108-170724-published-sawa9ly-6538.png"
@@ -160,8 +161,8 @@
       "marketplace_url": "https://www.facebook.com/marketplace/item/29011125538555337",
       "marketplace_listing_id": "29011125538555337",
       "marketplace_status": "En ligne",
-      "under_review": true,
-      "review_note": "Cette annonce est en cours d'examen — the listing remains online and public.",
+      "under_review": false,
+      "review_note": "Automated review completed; listing confirmed 'En ligne' with no review banner.",
       "published_at": "2026-11-08T16:09:10+00:00",
       "status": "PUBLISHED",
       "evidence_screenshot": "facebook/evidence/20261108-170855-published-sawa9ly-6541.png"
@@ -202,7 +203,8 @@
         "6527": 8,
         "6541": 7
       },
-      "page_conversation_link_rendered": true
+      "page_conversation_link_rendered": true,
+      "final_marketplace_status_check": "2026-11-08T16:15:09Z"
     }
   },
   "errors": [],
@@ -210,7 +212,7 @@
     "The Chromium profile facebook/.profile was signed out; publishing used facebook.com cookies from the Firefox profile 'bpr9xlmu.Default User' injected into a clean Chromium context.",
     "Navigating through /me/ switches Facebook to the Page identity and yields 'Pages can't use Marketplace'; the publisher opens /marketplace/create/item directly and retries only that URL.",
     "Anonymous Marketplace item requests are redirected to login after the first request, so verification relied on the authenticated view, the seller dashboard, and the listing title/price.",
-    "Listings 6538 and 6541 were still under automated review at report time and remain 'En ligne'."
+    "Listings 6538 and 6541 passed the automated review during the run; a final dashboard check at 16:15 UTC showed all five listings as 'En ligne' with no review banner."
   ],
   "artifacts": {
     "publish_state": "output/marketplace_publish_20261108.json",
