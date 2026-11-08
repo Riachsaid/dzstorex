@@ -1,0 +1,222 @@
+{
+  "report": {
+    "title": "Marketplace Publication Report",
+    "date": "2026-11-08",
+    "account": "Said Riach (personal Facebook profile)",
+    "page": "DZStoreX",
+    "page_id": "1391319567390331",
+    "page_conversation_url": "https://m.me/1391319567390331",
+    "site_url": "https://riachsaid.github.io/dzstorex/",
+    "repository": "Riachsaid/dzstorex",
+    "branch": "main",
+    "margin_da": 700,
+    "currency": "DZD",
+    "site_deploy_commit": "bcb7e94",
+    "summary": {
+      "selected": 5,
+      "published": 5,
+      "confirmed_online": 5,
+      "under_automated_review": 2,
+      "blocked": 0,
+      "failed": 0,
+      "duplicates": 0,
+      "security_challenges": 0
+    }
+  },
+  "products": [
+    {
+      "product_id": "6526",
+      "name": "Support Téléphone Voiture 2 en 1 avec Ventouse et Numéro de Stationnement - حامل هاتف للسيارة مع رقم هاتف مخفي للركن",
+      "marketplace_title": "Support téléphone voiture 2 en 1 ventouse + numéro de stationnement",
+      "category": "Électronique et ordinateurs",
+      "condition": "Neuf",
+      "location": "Aïn Témouchent, Algérie",
+      "stock_verification": {
+        "status": "AVAILABLE",
+        "verified_at": "2026-11-08T15:55:11+00:00",
+        "evidence": "stock='الكمية متوفرة' price='1,100 دج' buy_control=present"
+      },
+      "supplier_price_da": 1100,
+      "supplier_price_visibility": "internal_only",
+      "supplier_url_visibility": "internal_only",
+      "supplier_url": "https://sawa9ly.app/product/6526",
+      "margin_da": 700,
+      "final_price_da": 1800,
+      "images_count": 8,
+      "product_url": "https://riachsaid.github.io/dzstorex/product.html?id=6526",
+      "marketplace_url": "https://www.facebook.com/marketplace/item/29924210780514432",
+      "marketplace_listing_id": "29924210780514432",
+      "marketplace_status": "En ligne",
+      "under_review": false,
+      "published_at": "2026-11-08T16:03:03+00:00",
+      "status": "PUBLISHED",
+      "evidence_screenshot": "facebook/evidence/20261108-170250-published-sawa9ly-6526.png"
+    },
+    {
+      "product_id": "6538",
+      "name": "Brosse à dents électrique intelligente pour enfants (2-7 ans) - فرشاة أسنان كهربائية ذكية للأطفال",
+      "marketplace_title": "Brosse à dents électrique enfants U-shape USB IPX7 (2-7 ans)",
+      "category": "Puériculture et enfants",
+      "condition": "Neuf",
+      "location": "Aïn Témouchent, Algérie",
+      "stock_verification": {
+        "status": "AVAILABLE",
+        "verified_at": "2026-11-08T15:55:11+00:00",
+        "evidence": "stock='الكمية متوفرة' price='1,400 دج' buy_control=present"
+      },
+      "supplier_price_da": 1400,
+      "supplier_price_visibility": "internal_only",
+      "supplier_url_visibility": "internal_only",
+      "supplier_url": "https://sawa9ly.app/product/6538",
+      "margin_da": 700,
+      "final_price_da": 2100,
+      "images_count": 8,
+      "product_url": "https://riachsaid.github.io/dzstorex/product.html?id=6538",
+      "marketplace_url": "https://www.facebook.com/marketplace/item/39996588673319447",
+      "marketplace_listing_id": "39996588673319447",
+      "marketplace_status": "En ligne",
+      "under_review": true,
+      "review_note": "Cette annonce est en cours d'examen — the listing remains online and public.",
+      "published_at": "2026-11-08T16:07:41+00:00",
+      "status": "PUBLISHED",
+      "evidence_screenshot": "facebook/evidence/20261108-170724-published-sawa9ly-6538.png"
+    },
+    {
+      "product_id": "6535",
+      "name": "Chauffage Voiture Portable 12V 150W à Deux Vitesses - مدفأة سيارة محمولة بسرعتين لإزالة ضباب الزجاج",
+      "marketplace_title": "Chauffage voiture 12V 150W 2 vitesses – anti-buée et dégivrage",
+      "category": "Électronique et ordinateurs",
+      "condition": "Neuf",
+      "location": "Aïn Témouchent, Algérie",
+      "stock_verification": {
+        "status": "AVAILABLE",
+        "verified_at": "2026-11-08T15:55:11+00:00",
+        "evidence": "stock='الكمية متوفرة' price='2,350 دج' buy_control=present"
+      },
+      "supplier_price_da": 2350,
+      "supplier_price_visibility": "internal_only",
+      "supplier_url_visibility": "internal_only",
+      "supplier_url": "https://sawa9ly.app/product/6535",
+      "margin_da": 700,
+      "final_price_da": 3050,
+      "images_count": 6,
+      "product_url": "https://riachsaid.github.io/dzstorex/product.html?id=6535",
+      "marketplace_url": "https://www.facebook.com/marketplace/item/29139931515637927",
+      "marketplace_listing_id": "29139931515637927",
+      "marketplace_status": "En ligne",
+      "under_review": false,
+      "published_at": "2026-11-08T16:06:02+00:00",
+      "status": "PUBLISHED",
+      "evidence_screenshot": "facebook/evidence/20261108-170546-published-sawa9ly-6535.png"
+    },
+    {
+      "product_id": "6527",
+      "name": "InCard Smart Tag Tracker Compatible Apple Find My et Android - جهاز تتبع ذكي لتحديد موقع الأغراض الضائعة",
+      "marketplace_title": "Traceur intelligent InCard Smart Tag Apple Find My et Android IP67",
+      "category": "Électronique et ordinateurs",
+      "condition": "Neuf",
+      "location": "Aïn Témouchent, Algérie",
+      "stock_verification": {
+        "status": "AVAILABLE",
+        "verified_at": "2026-11-08T15:55:11+00:00",
+        "evidence": "stock='الكمية متوفرة' price='3,650 دج' buy_control=present"
+      },
+      "supplier_price_da": 3650,
+      "supplier_price_visibility": "internal_only",
+      "supplier_url_visibility": "internal_only",
+      "supplier_url": "https://sawa9ly.app/product/6527",
+      "margin_da": 700,
+      "final_price_da": 4350,
+      "images_count": 8,
+      "product_url": "https://riachsaid.github.io/dzstorex/product.html?id=6527",
+      "marketplace_url": "https://www.facebook.com/marketplace/item/29496595640031208",
+      "marketplace_listing_id": "29496595640031208",
+      "marketplace_status": "En ligne",
+      "under_review": false,
+      "published_at": "2026-11-08T16:04:34+00:00",
+      "status": "PUBLISHED",
+      "evidence_screenshot": "facebook/evidence/20261108-170422-published-sawa9ly-6527.png"
+    },
+    {
+      "product_id": "6541",
+      "name": "Horloge islamique numérique Azan Al-Haramee HA-4010 - ساعة منبه وأوقات الصلاة",
+      "marketplace_title": "Horloge islamique numérique Azan Al-Haramee HA-4010",
+      "category": "Pour la maison",
+      "condition": "Neuf",
+      "location": "Aïn Témouchent, Algérie",
+      "stock_verification": {
+        "status": "AVAILABLE",
+        "verified_at": "2026-11-08T15:55:11+00:00",
+        "evidence": "stock='الكمية متوفرة' price='4,400 دج' buy_control=present"
+      },
+      "supplier_price_da": 4400,
+      "supplier_price_visibility": "internal_only",
+      "supplier_url_visibility": "internal_only",
+      "supplier_url": "https://sawa9ly.app/product/6541",
+      "margin_da": 700,
+      "final_price_da": 5100,
+      "images_count": 7,
+      "product_url": "https://riachsaid.github.io/dzstorex/product.html?id=6541",
+      "marketplace_url": "https://www.facebook.com/marketplace/item/29011125538555337",
+      "marketplace_listing_id": "29011125538555337",
+      "marketplace_status": "En ligne",
+      "under_review": true,
+      "review_note": "Cette annonce est en cours d'examen — the listing remains online and public.",
+      "published_at": "2026-11-08T16:09:10+00:00",
+      "status": "PUBLISHED",
+      "evidence_screenshot": "facebook/evidence/20261108-170855-published-sawa9ly-6541.png"
+    }
+  ],
+  "deployment": {
+    "site_deploy_commit": "bcb7e94",
+    "site_deploy_commit_message": "Add 5 new products (6526, 6538, 6535, 6527, 6541) with photos, Page link and Marketplace slot",
+    "pushed_to": "origin/main",
+    "data_source": "n8n data table dzstorex_products (Z8XcfRJSFNos8lfh)",
+    "api_workflow": {
+      "id": "mA2ciODSVpjwEfWF",
+      "name": "DZStoreX - Products API",
+      "active_version": "fe4a0cd7-4928-4d73-80f6-cafab3e8672f",
+      "webhook": "https://uncorrectable-jeane-ungrudged.ngrok-free.dev/webhook/dzstorex/products"
+    },
+    "marketplace_url_sync": {
+      "column": "marketplace_url",
+      "updated_at": "2026-11-08T16:12:29Z",
+      "rows_updated": 5,
+      "verified_via_api": true
+    },
+    "verification": {
+      "product_images_http_200": true,
+      "product_pages_http_200": true,
+      "api_prices": {
+        "6526": 1800,
+        "6538": 2100,
+        "6535": 3050,
+        "6527": 4350,
+        "6541": 5100
+      },
+      "api_marketplace_url_present": true,
+      "api_images_count": {
+        "6526": 8,
+        "6538": 8,
+        "6535": 6,
+        "6527": 8,
+        "6541": 7
+      },
+      "page_conversation_link_rendered": true
+    }
+  },
+  "errors": [],
+  "operational_notes": [
+    "The Chromium profile facebook/.profile was signed out; publishing used facebook.com cookies from the Firefox profile 'bpr9xlmu.Default User' injected into a clean Chromium context.",
+    "Navigating through /me/ switches Facebook to the Page identity and yields 'Pages can't use Marketplace'; the publisher opens /marketplace/create/item directly and retries only that URL.",
+    "Anonymous Marketplace item requests are redirected to login after the first request, so verification relied on the authenticated view, the seller dashboard, and the listing title/price.",
+    "Listings 6538 and 6541 were still under automated review at report time and remain 'En ligne'."
+  ],
+  "artifacts": {
+    "publish_state": "output/marketplace_publish_20261108.json",
+    "payloads": "output/marketplace_payloads/{6526,6527,6535,6538,6541}.json",
+    "publisher_script": "output/marketplace_publish_firefox.py",
+    "product_links_doc": "docs/facebook-product-links.md",
+    "marketplace_report_md": "reports/MARKETPLACE_PUBLICATION_REPORT.md"
+  }
+}

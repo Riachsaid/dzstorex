@@ -25,6 +25,27 @@
 | 5325 | Pack Moto Hiver Cagoule Professionnel + Gants Pro Biker respirants avec protections antidérapantes | 3 500 دج | متاح للطلب | [5325](https://riachsaid.github.io/dzstorex/product.html?id=5325) |
 | 5495 | Bonnet d’hiver COB Headlight pour camping et randonnée – قبعة شتوية مزودة بمصباح أمامي | 2 900 دج | متاح للطلب | [5495](https://riachsaid.github.io/dzstorex/product.html?id=5495) |
 | 6387 | Tenue Imperméable Long avec Capuche Protection Complete - معطف مطر طويل مقاوم للماء | 3 000 دج | متاح للطلب | [6387](https://riachsaid.github.io/dzstorex/product.html?id=6387) |
+| 6526 | Support Téléphone Voiture 2 en 1 avec Ventouse et Numéro de Stationnement | 1 800 دج | متاح للطلب | [6526](https://riachsaid.github.io/dzstorex/product.html?id=6526) |
+| 6538 | Brosse à dents électrique intelligente pour enfants (2-7 ans) | 2 100 دج | متاح للطلب | [6538](https://riachsaid.github.io/dzstorex/product.html?id=6538) |
+| 6535 | Chauffage Voiture Portable 12V 150W à Deux Vitesses | 3 050 دج | متاح للطلب | [6535](https://riachsaid.github.io/dzstorex/product.html?id=6535) |
+| 6527 | InCard Smart Tag Tracker Compatible Apple Find My et Android | 4 350 دج | متاح للطلب | [6527](https://riachsaid.github.io/dzstorex/product.html?id=6527) |
+| 6541 | Horloge islamique numérique Azan Al-Haramee HA-4010 | 5 100 دج | متاح للطلب | [6541](https://riachsaid.github.io/dzstorex/product.html?id=6541) |
+
+## إعلانات Marketplace المنشورة (08/11/2026)
+
+كل إعلان يحمل رابط صفحة المنتج الخاصة به ورابط محادثة صفحة DZStoreX
+(`https://m.me/1391319567390331`)، وليس حساباً شخصياً.
+
+| المعرّف | عنوان الإعلان | السعر | حالة الإعلان | رابط Marketplace |
+|---|---|---|---|---|
+| 6526 | Support téléphone voiture 2 en 1 ventouse + numéro de stationnement | 1 800 دج | En ligne | <https://www.facebook.com/marketplace/item/29924210780514432> |
+| 6538 | Brosse à dents électrique enfants U-shape USB IPX7 (2-7 ans) | 2 100 دج | En ligne (قيد المراجعة الآلية) | <https://www.facebook.com/marketplace/item/39996588673319447> |
+| 6535 | Chauffage voiture 12V 150W 2 vitesses – anti-buée et dégivrage | 3 050 دج | En ligne | <https://www.facebook.com/marketplace/item/29139931515637927> |
+| 6527 | Traceur intelligent InCard Smart Tag Apple Find My et Android IP67 | 4 350 دج | En ligne | <https://www.facebook.com/marketplace/item/29496595640031208> |
+| 6541 | Horloge islamique numérique Azan Al-Haramee HA-4010 | 5 100 دج | En ligne (قيد المراجعة الآلية) | <https://www.facebook.com/marketplace/item/29011125538555337> |
+
+> رابط Marketplace يأتي من حقل `marketplace_url` في جدول `dzstorex_products`، ويعرضه
+> زر «شاهد الإعلان على Marketplace» في صفحة المنتج تلقائياً.
 
 ## صياغة مقترحة للمنشور
 
