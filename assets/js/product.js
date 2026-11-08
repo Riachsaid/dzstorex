@@ -133,6 +133,17 @@
 
     renderGallery(product.images);
 
+    const marketplaceLink = document.getElementById("marketplaceLink");
+    if (marketplaceLink) {
+      if (product.marketplaceUrl) {
+        marketplaceLink.href = product.marketplaceUrl;
+        marketplaceLink.classList.remove("hidden");
+      } else {
+        marketplaceLink.classList.add("hidden");
+        marketplaceLink.removeAttribute("href");
+      }
+    }
+
     if (ctaBtn) {
       if (product.orderable) {
         ctaBtn.disabled = false;

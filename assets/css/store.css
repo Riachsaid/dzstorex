@@ -359,6 +359,18 @@ button:disabled { opacity: .5; cursor: not-allowed; }
 .cta-row { display: flex; gap: 10px; flex-wrap: wrap; }
 .cta-row .primary { width: auto; margin-top: 0; flex: 1; min-width: 180px; }
 .cta-row .secondary { flex: 0 0 auto; }
+.product-links { display: flex; gap: 10px; flex-wrap: wrap; }
+.product-links .secondary {
+  flex: 0 0 auto;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  padding: 11px 15px;
+  font-weight: bold;
+  font-size: 13px;
+}
 
 .product-order { margin-top: 22px; }
 .product-order .grid { margin-top: 6px; }
