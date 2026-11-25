@@ -3,7 +3,7 @@
 
   // Public, non-secret storefront configuration.
   // The WhatsApp contact number is configurable in three ways (in priority order):
-  //   1. URL override: ?wa=213549296612  (digits only, with or without +)
+  //   1. URL override: ?wa=15551806504  (digits only, with or without +)
   //   2. window.DZSTORE_WA_NUMBER set before config.js loads
   //   3. whatsappNumber below (the default business contact)
   var urlWa = "";
@@ -12,7 +12,7 @@
   } catch (e) {
     urlWa = "";
   }
-  var configuredWa = window.DZSTORE_WA_NUMBER || "213549296612";
+  var configuredWa = window.DZSTORE_WA_NUMBER || "15551806504";
   var urlApi = "";
   try {
     urlApi = new URLSearchParams(window.location.search).get("api") || "";
@@ -21,7 +21,7 @@
   }
   var chosenWa = urlWa || configuredWa;
   var waDigits = String(chosenWa).replace(/[^0-9]/g, "");
-  if (waDigits.length < 8 || waDigits.length > 15) waDigits = "213549296612";
+  if (waDigits.length < 8 || waDigits.length > 15) waDigits = "15551806504";
 
   window.DZSTORE_CONFIG = Object.freeze({
     // Public backend base URL. It contains no credentials or supplier data.
