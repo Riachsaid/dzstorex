@@ -191,6 +191,7 @@ button:disabled { opacity: .5; cursor: not-allowed; }
 }
 
 .product-card {
+  position: relative;
   background: rgba(20, 28, 48, .96);
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -201,6 +202,32 @@ button:disabled { opacity: .5; cursor: not-allowed; }
   transition: transform .15s ease, border-color .15s ease;
 }
 .product-card:hover { transform: translateY(-2px); border-color: var(--blue); }
+
+.product-card-wa {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #25d366;
+  color: #075e54;
+  font-size: 17px;
+  line-height: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .35);
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.product-card-wa:hover,
+.product-card-wa:focus-visible {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, .4);
+  outline: 2px solid rgba(255, 255, 255, .75);
+  outline-offset: 2px;
+}
 
 .product-thumb {
   aspect-ratio: 1 / 1;
@@ -510,6 +537,46 @@ button:disabled { opacity: .5; cursor: not-allowed; }
 .dz-chat-fab.is-offline .dz-chat-online-dot {
   background: var(--red);
   box-shadow: 0 0 0 2px rgba(255, 107, 107, .25);
+}
+
+/* WhatsApp click-to-chat button (sits beside the AI assistant button) */
+.dz-wa-fab {
+  position: fixed;
+  right: max(88px, calc(env(safe-area-inset-right) + 88px));
+  bottom: max(22px, env(safe-area-inset-bottom));
+  z-index: 2147483003;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #25d366;
+  color: #075e54;
+  box-shadow: 0 12px 28px rgba(37, 211, 102, .32), 0 3px 10px rgba(0, 0, 0, .4);
+  pointer-events: auto;
+  transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+}
+.dz-wa-fab svg { width: 29px; height: 29px; }
+.dz-wa-fab:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 16px 34px rgba(37, 211, 102, .42), 0 4px 12px rgba(0, 0, 0, .42);
+}
+.dz-wa-fab:active { transform: scale(.97); }
+.dz-wa-fab:focus-visible { outline: 3px solid rgba(255, 255, 255, .8); outline-offset: 3px; }
+.dz-chat-root.is-open .dz-wa-fab {
+  opacity: 0;
+  transform: scale(.8);
+  pointer-events: none;
+}
+
+@media (max-width: 560px) {
+  .dz-wa-fab {
+    right: max(22px, env(safe-area-inset-right));
+    bottom: max(84px, calc(env(safe-area-inset-bottom) + 84px));
+    width: 48px;
+    height: 48px;
+  }
+  .dz-wa-fab svg { width: 26px; height: 26px; }
 }
 
 .dz-chat-panel {

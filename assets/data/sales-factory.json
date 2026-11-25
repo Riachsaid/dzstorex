@@ -1,0 +1,370 @@
+{
+  "generatedAt": "2026-11-25T22:46:31.086543+00:00",
+  "facebook": {
+    "publishedPosts": 2,
+    "byLanguage": {
+      "fr": 1,
+      "ar": 1
+    },
+    "posts": [
+      {
+        "productId": "5291",
+        "language": "fr",
+        "postId": "1391319567390331_122124339495494674",
+        "url": "https://www.facebook.com/1391319567390331/posts/1391319567390331_122124339495494674",
+        "publishedAt": "2026-11-25T22:42:01.589466+00:00"
+      },
+      {
+        "productId": "5291",
+        "language": "ar",
+        "postId": "1391319567390331_122124339513494674",
+        "url": "https://www.facebook.com/1391319567390331/posts/1391319567390331_122124339513494674",
+        "publishedAt": "2026-11-25T22:42:04.778469+00:00"
+      }
+    ],
+    "failures": []
+  },
+  "marketplace": {
+    "apiPublishingAvailable": false,
+    "prepared": 37,
+    "alreadyListed": 5,
+    "listings": [
+      {
+        "productId": "5291",
+        "name": "Radiateur Soufflant Céramique 500 W avec Thermostat Intelligente – سخان كهربائي محمول",
+        "priceDa": 3550,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=5291"
+      },
+      {
+        "productId": "5283",
+        "name": "Chauffage à quartz 2 niveaux de chauffe de 800W avec Interrupteur de sécurité – مدفأة كهربائية",
+        "priceDa": 3100,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=5283"
+      },
+      {
+        "productId": "5273",
+        "name": "Chauffage électrique portable 380W avec fonction d’arrêt automatique – سخان كهربائي محمول",
+        "priceDa": 3500,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=5273"
+      },
+      {
+        "productId": "5220",
+        "name": "Chauffage Soufflant electrique puissant de 380W – مدفأة كهربائية قوية بقدرة 380 واط، بتصميم أنيق وكفاءة عالية",
+        "priceDa": 4300,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=5220"
+      },
+      {
+        "productId": "5251",
+        "name": "Chauffage soufflant rapide 1200 W idéal pour la maison ou le bureau – سخان كهربائي محمول",
+        "priceDa": 4300,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=5251"
+      },
+      {
+        "productId": "3321",
+        "name": "Cobra Chauffage Électrique Économique 3 Résistance 1200W",
+        "priceDa": 6000,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=3321"
+      },
+      {
+        "productId": "3305",
+        "name": "Smart Chauffage Électrique 2 Vitesses 800W",
+        "priceDa": 4100,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=3305"
+      },
+      {
+        "productId": "6387",
+        "name": "Tenue Imperméable Long avec Capuche Protection Complete - معطف مطر طويل مقاوم للماء",
+        "priceDa": 3000,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=6387"
+      },
+      {
+        "productId": "5181",
+        "name": "Ensemble De Pluie Imperméable Veste Et Pantalon pour une protection optimale V1 – بدلة مقاومة للماء",
+        "priceDa": 2600,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=5181"
+      },
+      {
+        "productId": "3123",
+        "name": "Gants Thermiques Chaudes Hivernaux Cataphote Unisexe Screen Touch",
+        "priceDa": 2050,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=3123"
+      },
+      {
+        "productId": "5282",
+        "name": "Paire de Chaussettes Chaudes d’hiver unisexes en cuir zippées",
+        "priceDa": 1600,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=5282"
+      },
+      {
+        "productId": "5495",
+        "name": "Bonnet d’hiver COB Headlight pour camping et randonnée – قبعة شتوية مزودة بمصباح أمامي",
+        "priceDa": 2900,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=5495"
+      },
+      {
+        "productId": "3206",
+        "name": "Bonnet LED Unisexe Rechargeable par USB – Gris",
+        "priceDa": 2100,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=3206"
+      },
+      {
+        "productId": "5296",
+        "name": "Eva Manteau imperméable à capuche – Mauve – معطف بغطاء رأس مقاوم للماء",
+        "priceDa": 1350,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=5296"
+      },
+      {
+        "productId": "3286",
+        "name": "Pack Hiver Manteau imperméable à capuche et Gants Thermiques Chaudes",
+        "priceDa": 2600,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=3286"
+      },
+      {
+        "productId": "3311",
+        "name": "Pack Hiver Cagoule a Capuche et Gants Thermiques Chaudes",
+        "priceDa": 2700,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=3311"
+      },
+      {
+        "productId": "5325",
+        "name": "Pack Moto Hiver Cagoule Professionnel + Gants Pro Biker respirants avec protections antidérapantes",
+        "priceDa": 3500,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=5325"
+      },
+      {
+        "productId": "1066",
+        "name": "Anneau de dentition en Silicone pour bébé, sans BPA, doux, succion des doigts",
+        "priceDa": 1600,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=1066"
+      },
+      {
+        "productId": "1063",
+        "name": "Casque De Sécurité 360° Pour Bébé De 6 A 24 Mois-Multicolor",
+        "priceDa": 2150,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=1063"
+      },
+      {
+        "productId": "5461",
+        "name": "Harnais d’apprentissage de marche pour bébé",
+        "priceDa": 2100,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=5461"
+      },
+      {
+        "productId": "1373",
+        "name": "Chauffe-biberon Portable USB pour bébé سخان زجاجات الأطفال المحمول USB",
+        "priceDa": 2650,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=1373"
+      },
+      {
+        "productId": "1593",
+        "name": "Mouche Nez, Aspirateur nasal électrique pour bébé 2 Tailles D'embouts - شفاطة الأنف الكهربائية للطفل",
+        "priceDa": 2100,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=1593"
+      },
+      {
+        "productId": "1758",
+        "name": "Chauffe-mains à griffes de chat mignon portable batterie 1200mah",
+        "priceDa": 2000,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=1758"
+      },
+      {
+        "productId": "4076",
+        "name": "Lampe frontale LED rechargeable 1500 lumens, 5 modes, étanche IPX4 – مصباح الرأس",
+        "priceDa": 1800,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=4076"
+      },
+      {
+        "productId": "4082",
+        "name": "Mandoline Trancheuse à légumes multifonctionnelle – أداة تقطيع الخضر",
+        "priceDa": 1800,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=4082"
+      },
+      {
+        "productId": "5057",
+        "name": "Humidificateur à brume de 350 ml portatifs avec veilleuse rechargeable USB – معطر جو مع مصباح 2في1",
+        "priceDa": 3800,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=5057"
+      },
+      {
+        "productId": "6030",
+        "name": "Projecteur de Galaxie et Veilleuse Panda Intelligente Bluetooth avec 15 Effets Lumineux - جهاز بروجكتر المجرات بشكل باندا مع مكبر صوت",
+        "priceDa": 2750,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=6030"
+      },
+      {
+        "productId": "6247",
+        "name": "Horloge Réveil Numérique LED en Forme de Maison Double Alarme Veilleuse Douce GH8063 - ساعة منبه رقمية بتصميم منزل أنيق مع إضاءة ليلية وشاشة كاملة",
+        "priceDa": 3300,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=6247"
+      },
+      {
+        "productId": "5939",
+        "name": "Réservoir d'Eau Pliable 8L Portable pour Camping et Randonnée - خزان مياه قابل للطي سعة 8 لتر للرحلات والخرجات",
+        "priceDa": 2100,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=5939"
+      },
+      {
+        "productId": "1979",
+        "name": "Support pliable réglable en Aluminium pour ordinateur Portable",
+        "priceDa": 2050,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=1979"
+      },
+      {
+        "productId": "6155",
+        "name": "Transmetteur FM Modulateur pour Voiture - Affichage Numérique, Lecteur USB et Carte TF Charge Rapide - جهاز بث وتعديل ترددات للسيارة مع شاشة رقمية وشاحن سريع",
+        "priceDa": 2050,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=6155"
+      },
+      {
+        "productId": "5363",
+        "name": "Collier Laser LED un Jouet Interactif pour Chat – سوار ليزر للقطط",
+        "priceDa": 1900,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=5363"
+      },
+      {
+        "productId": "6526",
+        "name": "Support Téléphone Voiture 2 en 1 avec Ventouse et Numéro de Stationnement - حامل هاتف للسيارة مع رقم هاتف مخفي للركن",
+        "priceDa": 1800,
+        "status": "listed",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=6526"
+      },
+      {
+        "productId": "6538",
+        "name": "Brosse à dents électrique intelligente pour enfants (2-7 ans) - فرشاة أسنان كهربائية ذكية للأطفال",
+        "priceDa": 2100,
+        "status": "listed",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=6538"
+      },
+      {
+        "productId": "6535",
+        "name": "Chauffage Voiture Portable 12V 150W à Deux Vitesses - مدفأة سيارة محمولة بسرعتين لإزالة ضباب الزجاج",
+        "priceDa": 3050,
+        "status": "listed",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=6535"
+      },
+      {
+        "productId": "6527",
+        "name": "InCard Smart Tag Tracker Compatible Apple Find My et Android - جهاز تتبع ذكي لتحديد موقع الأغراض الضائعة",
+        "priceDa": 4350,
+        "status": "listed",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=6527"
+      },
+      {
+        "productId": "6541",
+        "name": "Horloge islamique numérique Azan Al-Haramee HA-4010 - ساعة منبه وأوقات الصلاة",
+        "priceDa": 5100,
+        "status": "listed",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=6541"
+      },
+      {
+        "productId": "4958",
+        "name": "100PCS faux ongles carrés transparents professionnels en acrylique – طقم أظافر صناعية",
+        "priceDa": 1600,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=4958"
+      },
+      {
+        "productId": "2199",
+        "name": "2 Barres Push-up Poignées De Fitness Poignées De Pompe",
+        "priceDa": 2500,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=2199"
+      },
+      {
+        "productId": "5393",
+        "name": "8 Pcs Protections de poignées de porte en silicone transparent – واقيات مقابض الأبواب من السيليكون الشفاف",
+        "priceDa": 1850,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=5393"
+      },
+      {
+        "productId": "5584",
+        "name": "AL-Harameen-Capteur de Porte Magnétique (adhkar/zikir) à l’ouverture de la porte – جهاز الأذكار الأتوماتيكي",
+        "priceDa": 2600,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=5584"
+      },
+      {
+        "productId": "4904",
+        "name": "AVEL Multiprise 3 Sockets avec 4 ports USB Cordon 1,8 m Enroulable – مقبس طاقة مع منافذ شحن",
+        "priceDa": 2650,
+        "status": "prepared",
+        "listingUrl": null,
+        "productUrl": "https://riachsaid.github.io/dzstorex/product.html?id=4904"
+      }
+    ]
+  }
+}

@@ -56,6 +56,7 @@
                 '<div class="status-line"><span class="badge ' + (p.orderable ? "badge-available" : "badge-unverified") + '">' + availabilityLabel(p) + "</span></div>" +
               "</div>" +
             "</div>" +
+            '<span class="product-card-wa" role="button" tabindex="0" data-wa-id="' + escapeHtml(p.id) + '" data-wa-name="' + escapeHtml(p.name) + '" data-wa-price="' + escapeHtml(p.priceDa === null ? "السعر غير متوفر" : pricePlain(p.priceDa)) + '" aria-label="تواصل عبر واتساب بخصوص ' + escapeHtml(p.name) + '" title="تواصل عبر واتساب">📱</span>' +
           "</a>"
         );
       })
@@ -115,6 +116,41 @@
         errorEl.textContent = "تعذر تحميل المنتجات حالياً. تحقق من اتصالك ثم أعد تحميل الصفحة.";
       }
     }
+  }
+
+  function openProductWhatsApp(el) {
+    if (!el || !window.DZStoreWhatsAppUrl || !window.DZSTORE_CONFIG) return;
+    const cfg = window.DZSTORE_CONFIG;
+    const name = el.getAttribute("data-wa-name") || "";
+    const price = el.getAttribute("data-wa-price") || "";
+    const id = el.getAttribute("data-wa-id") || "";
+    const url = cfg.siteBase + "/product.html?id=" + encodeURIComponent(id);
+    const message = "مرحبا DZStoreX، نبغي معلومات على المنتج:\n" + name + "\n" + price + "\n" + url;
+    const a = document.createElement("a");
+    a.href = window.DZStoreWhatsAppUrl(message);
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+
+  if (gridEl) {
+    gridEl.addEventListener("click", function (event) {
+      const target = event.target && event.target.closest ? event.target.closest(".product-card-wa") : null;
+      if (!target) return;
+      event.preventDefault();
+      event.stopPropagation();
+      openProductWhatsApp(target);
+    });
+    gridEl.addEventListener("keydown", function (event) {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      const target = event.target && event.target.closest ? event.target.closest(".product-card-wa") : null;
+      if (!target) return;
+      event.preventDefault();
+      event.stopPropagation();
+      openProductWhatsApp(target);
+    });
   }
 
   if (selectEl) selectEl.addEventListener("change", updateSummary);

@@ -75,9 +75,28 @@
         '<span class="dz-chat-badge" id="dzChatBadge" hidden aria-hidden="true">0</span>' +
         '<span class="dz-chat-online-dot" aria-hidden="true"></span>' +
       '</button>' +
+      '<a class="dz-wa-fab" id="dzWaFab" href="https://wa.me/213549296612" target="_blank" rel="noopener noreferrer" aria-label="تواصل مع DZStoreX عبر واتساب" title="تواصل عبر واتساب">' +
+        '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">' +
+          '<path d="M12 2a10 10 0 0 0-8.6 15L2 21.4l4.5-1.4A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.7.8.8-2.6-.2-.3A8 8 0 1 1 12 20Z"/>' +
+          '<path d="M8.5 10.5c.3 2.4 2.6 4.7 5 5l1.2-1.2c.2-.2.5-.3.8-.2 1 .3 2 .5 3.1.5.5 0 .9.4.9.9V18c0 .5-.4.9-.9.9C11.2 18.9 5.1 12.8 5.1 5.4c0-.5.4-.9.9-.9h2.3c.5 0 .9.4.9.9 0 1.1.2 2.1.5 3.1.1.3 0 .6-.2.8l-1 1.2Z"/>' +
+        '</svg>' +
+      '</a>' +
     '</div>';
 
   ensureWidget();
+
+  const waFabEl = document.getElementById("dzWaFab");
+  const chatRootEl = document.getElementById("dzChatRoot");
+  if (window.DZStoreWhatsAppUrl) {
+    if (waFabEl) {
+      waFabEl.href = window.DZStoreWhatsAppUrl(cfg.whatsappDefaultMessage);
+      waFabEl.setAttribute("aria-label", "تواصل مع DZStoreX عبر واتساب " + (cfg.whatsappNumberDisplay || ""));
+    }
+    Array.prototype.forEach.call(document.querySelectorAll(".dz-wa-link"), function (link) {
+      if (link.id === "whatsappProductLink") return; // set with product context by product.js
+      link.href = window.DZStoreWhatsAppUrl(cfg.whatsappDefaultMessage);
+    });
+  }
 
   const panelEl = document.getElementById("dzChatPanel");
   const fabEl = document.getElementById("dzChatFab");
@@ -214,6 +233,7 @@
     isOpen = !!open;
     panelEl.classList.toggle("is-open", isOpen);
     fabEl.classList.toggle("is-open", isOpen);
+    if (chatRootEl) chatRootEl.classList.toggle("is-open", isOpen);
     panelEl.setAttribute("aria-hidden", isOpen ? "false" : "true");
     fabEl.setAttribute("aria-expanded", isOpen ? "true" : "false");
     if (isOpen) {

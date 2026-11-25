@@ -103,6 +103,7 @@
   }
 
   function renderProduct(product) {
+    const cfg = window.DZSTORE_CONFIG;
     currentProduct = product;
     document.title = product.name + " | DZStoreX";
 
@@ -142,6 +143,40 @@
         marketplaceLink.classList.add("hidden");
         marketplaceLink.removeAttribute("href");
       }
+    }
+
+    // Open Graph metadata so Facebook/WhatsApp link previews show the real product image.
+    try {
+      const setMeta = function (property, content) {
+        let el = document.querySelector('meta[property="' + property + '"]');
+        if (!el) {
+          el = document.createElement("meta");
+          el.setAttribute("property", property);
+          document.head.appendChild(el);
+        }
+        el.setAttribute("content", content || "");
+      };
+      const ogUrl = cfg.siteBase + "/product.html?id=" + encodeURIComponent(product.id);
+      setMeta("og:title", product.name);
+      setMeta("og:description", product.description || product.name);
+      setMeta("og:url", ogUrl);
+      setMeta("og:type", "product");
+      if (product.images && product.images.length) setMeta("og:image", product.images[0]);
+    } catch (e) {
+      /* previews are optional */
+    }
+
+    const waProductLink = document.getElementById("whatsappProductLink");
+    if (waProductLink && window.DZStoreWhatsAppUrl) {
+      const price = product.priceDa === null || product.priceDa === undefined
+        ? "السعر غير متوفر"
+        : window.DZStorePricePlain
+          ? window.DZStorePricePlain(product.priceDa)
+          : String(product.priceDa) + " دج";
+      const productUrl = cfg.siteBase + "/product.html?id=" + encodeURIComponent(product.id);
+      const message = "مرحبا DZStoreX، نبغي معلومات على المنتج:\n" + product.name + "\n" + price + "\n" + productUrl;
+      waProductLink.href = window.DZStoreWhatsAppUrl(message);
+      waProductLink.setAttribute("aria-label", "تواصل عبر واتساب بخصوص " + product.name);
     }
 
     if (ctaBtn) {
