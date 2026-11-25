@@ -10,7 +10,25 @@
   async function request(path, options) {
     const opts = options || {};
     opts.headers = Object.assign({}, baseHeaders, opts.headers || {});
-    const res = await fetch(cfg.apiBase + path, opts);
+
+    // A stalled tunnel must not leave the submit button waiting forever.
+    const timeoutMs = opts.timeoutMs || 30000;
+    const controller = typeof AbortController === "function" ? new AbortController() : null;
+    if (controller) opts.signal = controller.signal;
+    const timer = controller ? setTimeout(function () { controller.abort(); }, timeoutMs) : null;
+
+    let res;
+    try {
+      res = await fetch(cfg.apiBase + path, opts);
+    } catch (error) {
+      if (error && error.name === "AbortError") {
+        throw new Error("تعذر الاتصال بالخادم. حاول مرة أخرى بعد قليل.");
+      }
+      throw error;
+    } finally {
+      if (timer) clearTimeout(timer);
+    }
+
     let data = null;
     try {
       data = await res.json();

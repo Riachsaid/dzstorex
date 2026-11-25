@@ -9,9 +9,23 @@
     address: "العنوان",
     quantity: "الكمية",
     deliveryCompany: "شركة التوصيل",
+    deliveryMode: "طريقة الاستلام",
     notes: "الملاحظات",
     productId: "المنتج"
   };
+
+  // One idempotency key per user submission attempt. The server stores it and
+  // refuses a second order with the same key, so a double-click or a lost
+  // response can never create two orders. A fresh key is issued after a
+  // successful submission (a genuinely new order).
+  function makeRequestId() {
+    try {
+      if (window.crypto && typeof window.crypto.randomUUID === "function") {
+        return window.crypto.randomUUID();
+      }
+    } catch (e) { /* fall through to the fallback below */ }
+    return "dzx-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 12);
+  }
 
   function normalizePhone(value) {
     let phone = String(value || "").replace(/[\s\-().]/g, "");
@@ -40,6 +54,7 @@
     const resultEl = document.getElementById(options.resultId || "orderResult");
     const submitBtn = form.querySelector('button[type="submit"]');
     const wilayaSelect = form.querySelector('select[name="wilayaCode"]');
+    let requestId = makeRequestId();
     populateWilayas(wilayaSelect);
 
     function showMessage(text, type) {
@@ -101,6 +116,10 @@
       if (delivery !== "Yalidine" && delivery !== "ZR Express") {
         localErrors.push("اختر شركة التوصيل.");
       }
+      const deliveryMode = data.get("deliveryMode");
+      if (deliveryMode !== "home" && deliveryMode !== "pickup") {
+        localErrors.push("اختر طريقة الاستلام: توصيل للمنزل أو استلام من المحل.");
+      }
       if (localErrors.length) {
         showMessage(localErrors.join(" "), "error");
         return;
@@ -115,6 +134,8 @@
         address: String(data.get("address") || "").trim(),
         quantity: quantity,
         deliveryCompany: delivery,
+        deliveryMode: deliveryMode,
+        requestId: requestId,
         notes: String(data.get("notes") || "").trim(),
         source: options.source || "homepage",
         sessionId: window.DZStoreChat ? window.DZStoreChat.getSessionId() : ""
@@ -148,9 +169,23 @@
           window.DZStoreChat.notifyOrderReceived(result);
         }
 
+        // This key has been consumed. A later submit is a genuinely new order.
+        requestId = makeRequestId();
         if (typeof options.onSuccess === "function") options.onSuccess(result, payload);
       } catch (error) {
         console.error(error);
+        const duplicate = error.status === 409 && error.data && error.data.error === "DUPLICATE_ORDER";
+        if (duplicate && error.data.orderRef) {
+          showMessage(
+            "تم استلام هذا الطلب مسبقاً برقم " + String(error.data.orderRef) +
+            ". سيتواصل معك فريق DZStoreX للتأكيد.",
+            "success"
+          );
+          if (window.DZStoreChat) {
+            window.DZStoreChat.setOrderContext({ orderRef: error.data.orderRef, status: "received" });
+          }
+          return;
+        }
         const fields = error.data && error.data.fields ? error.data.fields : {};
         Object.keys(fields).forEach(function (key) {
           const input = form.querySelector('[name="' + key + '"]');
