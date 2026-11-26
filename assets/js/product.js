@@ -195,6 +195,16 @@
       }
     }
 
+    if (window.DZStoreDiscuter) {
+      window.DZStoreDiscuter.attachProduct({
+        id: product.id,
+        name: product.name,
+        url: cfg.siteBase + "/product.html?id=" + encodeURIComponent(product.id),
+        variantId: product.variantId || "",
+        variants: product.variants || []
+      });
+    }
+
     if (window.DZStoreChat) {
       window.DZStoreChat.setProduct(product.id);
       window.DZStoreChat.setOrderContext(null);

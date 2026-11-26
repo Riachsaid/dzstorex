@@ -105,6 +105,7 @@
       const data = await window.DZStoreAPI.getProducts();
       products = (data && data.products) || [];
       renderProducts();
+      if (window.DZStoreDiscuter) window.DZStoreDiscuter.attachCards(products);
       populateSelect();
       updateSummary();
       if (loadingEl) loadingEl.classList.add("hidden");

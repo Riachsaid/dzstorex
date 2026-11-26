@@ -48,7 +48,7 @@ export function ProductCard({ product }: { product: ProductWithStock }) {
             id: row.id,
             name: row.name,
             slug: row.slug,
-            url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://dzstorex.leadonhold.com'}/products/${row.slug}`,
+            url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://riachsaid.github.io/dzstorex'}/product.html?id=${encodeURIComponent(row.id)}`,
             variantId: product.variants[0]?.id ?? '',
           }}
         />
